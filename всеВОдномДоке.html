@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<!--Shift + Alt + F-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>"The BEST" software development company </title>
+    <meta name="description" content="this software development company is the best" />
+    <link rel="icon" href="https://i.pinimg.com/564x/ee/b6/6d/eeb66dfadba74138ff696feafdfbc092.jpg">
+    <meta name="keywords" content="software, development">
+    <meta property='og:title' content="The BEST" />
+    <meta property='og:type' content="article" />
+    <meta name="author" content="Veronika">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cf0ef7e45f.js" crossorigin="anonymous"></script>
+    <style>
+        
+#sticky {
+    width:100%;
+    background:rgb(174, 174, 250);
+    background: white;
+    
+    z-index: 1;
+    top: 0;
+    position: sticky;
+}
+h1{
+	position: absolute;
+    color: rgb(250, 220, 52);
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    top: 65px;
+    text-shadow: 2px 2px 5px black;
+    font-size: 38px;
+}
+p{
+    font-size: larger;
+}
+main {
+
+    margin-right: 100px;
+	margin-bottom: 100px;
+    margin-left: 100px;
+    font-size: 15px;
+    position: relative;
+}
+ul{
+    width: 100%;
+    text-align: center;
+}
+li {
+	display: inline;
+    text-align: center;
+	width: 100px;
+    height: 100px;
+    padding: 5px;
+    font-size: 30px;
+    position: relative;
+}
+.appear_underline:hover::after {
+    content: attr(underline);
+    position: absolute;
+    bottom:-12px;
+    right:0px;
+    left:0px;
+    padding:10px;
+    font-size: 20px;  
+    text-align: center;
+    z-index: 11000;
+}
+a {
+  text-decoration: none;
+  color: rgb(230, 200, 52);
+}
+#Projects{
+    width: 100%;
+}
+.galery > div {
+    background: #eee;
+    float: left;
+    width: 32%;
+    height: 230 px;
+    margin-right: 2%;
+}
+.galery > div:last-child {
+    margin-right: 0;
+}
+.galery > div > div >img{
+    width: 90%;
+    margin: 5%;
+    position: relative;
+    text-align: center;
+}
+div.OurTeam{
+    width: 100%;
+    height: 600px;
+    background-image: url('https://i.pinimg.com/originals/9b/29/a8/9b29a84357de66b3c7c492f55b1d17b0.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 992px) {
+    li {
+        font-size: 26px;
+    }
+    .galery > div {
+        width: 100%;
+        text-align: center;
+        background: rgb(255, 255, 255);
+    }
+    div.OurTeam{
+        height: 400px;
+    }
+}
+@media screen and (max-width: 768px) {
+    li {
+        display: block;
+        height: 12px;
+        width: 100%;
+        padding: 5px;
+        font-size: 20px;
+    }
+    main {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    div.OurTeam{
+        height: 300px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #header{
+    	height : 100px;
+    }
+    h1{
+    	top: 25px;
+    	font-size: 30px;
+    }
+    div.OurTeam{
+        height: 200px;
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 0px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.26);
+  }
+  
+  /* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #95aeff;
+    margin: auto;
+    padding: 20;
+    padding-top: 10px;
+    width: 90%;
+    text-align: center;
+    height: auto;
+    padding-bottom: 30px;
+}
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.calculator{
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 100px;
+    margin-bottom: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.26);
+}
+.calculator-content{
+    position: relative;
+    margin: auto;
+    padding: 20;
+    padding-top: 10px;
+    width: 90%;
+    text-align: center;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    max-width: 500px;
+}
+.calc_input{
+    width: 30px;
+}
+.closeCalc {
+    color: black;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+.traperium_param > p > input{
+    background-color: #8ae7c5;
+}
+.appear_addinfo:hover::after {
+    content: attr(info);
+    font-size: 20px;  
+    text-align: center;
+    z-index: 11000;
+}
+.aliasing{
+    padding-left: 20%;
+    text-align: left;
+}
+.iNeedPadding{
+    padding-top: 40px;
+}
+input[type="text"]{
+    width: 70%;
+}
+input[type="tel"]{
+    width: 70%;
+}
+input[type="email"]{
+    width: 70%;
+}
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1>"The BEST" software development company</h1>
+        <section>
+            <img src="https://i.pinimg.com/originals/59/1f/39/591f39dcf7c9145e6f9cb47f0c5d89b2.jpg">
+        </section>
+
+    </div>
+    <div id="sticky">
+        <nav>
+            <ul>
+                <label><li><span class="appear_underline" underline="_________">
+                        <a href="#WhatWeDo">What We Do</a></span></li></label>
+                <li><span class="appear_underline" underline="____________">
+                        <a href="#OurExperience">Our Experience</a></span></li>
+                <li><span class="appear_underline" underline="______">
+                        <a href="#Projects">Projects</a></span></li>
+                <li><span class="appear_underline" underline="_______">
+                        <a href="#OurTeam">Our Team</a></span></li>
+                <li><span class="appear_underline" underline="________">
+                        <a href="#ContactUs">Contact Us</a></span></li>
+            </ul>
+
+        </nav>
+    </div>
+
+    <main>
+        <div>
+            <div id="WhatWeDo">
+                <h2>What We Do</h2>
+                <p class="text">
+                    The whole company, established by prior experts from information technologies, provides a solution
+                    for automated design systems, design and production, as well as control systems for a given product.
+                    We offer good service to companies with a great deal of light for more than 20 years, in fact, but
+                    the very best of pre-construction projects with clients and partners - one of the main principles of
+                    our robots is to help you find the results of the projects. The whole company, established by prior
+                    experts from information technologies, provides a solution for automated design systems, design and
+                    production, as well as control systems for a given product. We offer good service to companies with
+                    a great deal of light for more than 20 years, in fact, but the very best of pre-construction
+                    projects with clients and partners - one of the main principles of our robots is to help you find
+                    the results of the projects.
+                </p>
+                <p class="text">
+                    The whole company, established by prior experts from information
+                    technologies, provides a solution for automated design systems, design and production, as well as
+                    control systems for a given product. We offer good service to companies with a great deal of light
+                    for more than 20 years, in fact, but the very best of pre-construction projects with clients and
+                    partners - one of the main principles of our robots is to help you find the results of the projects.
+                </p>
+            </div>
+            <div id="OurExperience">
+                <h2>Our Experience</h2>
+                <p class="text">
+                    We actively participate in industry professional organizations that promote high standards among
+                    global sourcing providers.
+                </p>
+                <p class="text">
+                    We place special emphasis on building long–term relationships with our
+                    clients and will be pleased to see you in the list of our partners! The whole company, established
+                    by prior experts from information technologies, provides a solution for automated design systems,
+                    design and production, as well as control systems for a given product. We offer good service to
+                    companies with a great deal of light for more than 20 years, in fact, but the very best of
+                    pre-construction projects with clients and partners - one of the main principles of our robots is to
+                    help you find the results of the projects. The whole company, established by prior experts from
+                    information technologies, provides a solution for automated design systems, design and production,
+                    as well as control systems for a given product. We offer good service to companies with a great deal
+                    of light for more than 20 years, in fact, but the very best of pre-construction projects with
+                    clients and partners - one of the main principles of our robots is to help you find the results of
+                    the projects. The whole company, established by prior experts from information technologies,
+                    provides a solution for automated design system
+                </p>
+                <p class="text">
+                    Desesign and production, as well as control systems
+                    for a given product. We offer good service to companies with a great deal of light for more than 20
+                    years, in fact, but the very best of pre-construction projects with clients and partners - one of
+                    the main principles of our robots is to help you find the results of the projects.
+                </p>
+            </div class="itemListView news-list">
+            <div id="Projects">
+                <h2>Projects</h2>
+                <div class="galery">
+                    <div>
+                        <div><img src="https://i.pinimg.com/originals/60/50/f7/6050f7a8523876e11717f33746dc4410.jpg">
+                        </div>
+                        <p>Advancing Robotics Simulation</p>
+                    </div>
+                    <div>
+                        <div><img src="https://i.pinimg.com/originals/b8/d2/8f/b8d28fd860473c6c81a4a67eaaf128b6.jpg">
+                        </div>
+                        <p>Forge-Based Solution</p>
+                    </div>
+                    <div>
+                        <div><img src="https://i.pinimg.com/originals/e9/f8/2e/e9f82e3b06e967b6a5c6a6b2fbd0842c.jpg">
+                        </div>
+                        <p>Complete Cloud-based Simulation Suite</p>
+                    </div>
+                </div>
+            </div>
+            <div id="OurTeam ">
+                <h2>Our Team </h2>
+                <div class="OurTeam"></div>
+            </div>
+            <div id="ContactUs">
+                <h2>Contact Us <i class="fas fa-comment-alt"></i></h2>
+                <p><i class="fas fa-phone-alt"></i><a href="tel:+380555555555"> call us</a></p>
+                <p><i class="fas fa-at"></i><a href="mailto:vlad@htmlbook.ru"> Ask questions by email</a></p>
+                <button id="myBtn"><i class="fas fa-pencil-alt"></i> leave an information about you and your request and
+                    we contact to you soon</button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">x</span>
+                        <form method="get">
+                            <label>
+                                <p>Your name and surname</p>
+                                <div class="aliasing"><input type="text" name="Name"><br></div>
+                            </label>
+                            <p>Chouse target of you message</p>
+                            <div class="aliasing">
+                                <label> <input type="radio" name="target" value="make order">I want to make order a
+                                    software product<br></label>
+                                <label> <input type="radio" name="target" value="join">I want to join you
+                                    company<br></label>
+                                <label> <input type="radio" name="target" value="complaint">I want to leave a
+                                    complaint<br></label>
+                                <label> <input type="radio" name="target" value="other">Other variant<br></label>
+                            </div>
+                            <p>Explain your request</p>
+                            <textarea rows="5" cols="45" name="Explain"></textarea>
+                            <p>Wich help you need?</p>
+                            <div class="aliasing">
+                                <label> <input type="checkbox" name="who" value="director">director<br></label>
+                                <label> <input type="checkbox" name="who" value="HR-manager">HR-manager<br></label>
+                                <label> <input type="checkbox" name="who" value="Bisiness analytic">Bisiness
+                                    analytic<br></label>
+                                <label> <input type="checkbox" name="who" value="document department">document
+                                    department<br></label>
+                                <label> <input type="checkbox" name="who" value="other">other<br></label>
+                            </div>
+                            <p>How to connect with you?</p>
+                            <div class="aliasing">
+                                <span class="appear_addinfo" info="you must leave phone or email"><select
+                                        name="HpwToConnect">
+                                        <option value="1">"Call me"</option>
+                                        <option selected="" value="2">by email</option>
+                                    </select></span>
+                            </div>
+                            <p>Leave pnone number</p>
+                            <div class="aliasing"><input type="tel" name="phone"><br></div>
+                            <p>Leave email address</p>
+                            <div class="aliasing"><input type="email" name="emailadd"><br></div>
+                            <div class="iNeedPadding">
+                                <label><input type="submit" name="Send"></label>
+                                <label><input type="reset" name="Clear"></label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="trapezium perimeter">
+            <h2>let's calculate the perimeter of the trapezoid </h2>>
+            <button id="letscalculate"> Let`s try! </button>
+            <div id="calculator" class="calculator">
+                <div class="calculator-content">
+                    <span class="closeCalc">x</span>
+                    <div class="traperium_param">
+                        <p>Enter length of sides a, b, c, d (in cm)</p>
+                        <div><img src="https://tamali.net/calculator/2d/trapeze/img/trapezeABDC.jpg"></div>
+                        <p>a = <input type="number" name="sideA" class="calc_input" value="1"> cm<br></p>
+                        <p>b = <input type="number" name="sideB" class="calc_input" value="1"> cm<br></p>
+                        <p>c = <input type="number" name="sideC" class="calc_input" value="1"> cm<br></p>
+                        <p>d = <input type="number" name="sideD" class="calc_input" value="1"> cm<br></p>
+
+                        <p id="demoCheck"></p>
+                        <button id="countButtom">See count</button>
+                        <button id="reset_sides">Reset</button>
+                        <p id="demo"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>author Kotelevska V.</p>
+        <p>copyright ...</p>
+    </footer>
+
+
+</body>
+
+</html>
+
+<script>
+    var modal = document.querySelector("#myModal");
+var btn = document.querySelector("#myBtn");
+var span = document.querySelectorAll(".close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+document.onload = function() {
+  for(i = 0; i < 4; i++){
+    document.getElementsByClassName("calc_input")[i].defaultValue = "1";
+  }
+}
+
+const letscalculate = document.querySelector("#letscalculate");
+const calulator = document.querySelector("#calculator");
+const closeCalc = document.querySelector(".closeCalc");
+letscalculate.onclick = function() {
+  calulator.style.display = "block";
+}
+closeCalc.onclick = function() {
+  calulator.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == calulator) {
+    calulator.style.display = "none";
+  }
+}
+
+const countButtom = document.querySelector("#countButtom");
+const reset_sides = document.querySelector("#reset_sides");
+
+countButtom.onclick = function(){
+  inputArray = document.getElementsByClassName("calc_input");
+  var sum = 0;
+  for (i = 0; i < inputArray.length; i++) {
+    let a = parseFloat(inputArray[i].value);
+    if (typeof a != "number"){
+      changeBorders(i);
+      alert("you shoud enter number values")
+    }
+    if (a <= 0 || isNaN(a)){
+      changeBorders(i);
+      alert("you shoud enter values bigger then 0")
+    }
+    else{
+      sum += a;
+    }
+  }
+  document.getElementById("demo").innerHTML = "trapezium perimeter = "+ sum;
+}
+
+function changeBorders(i){
+    document.getElementsByClassName("calc_input")[i].style.borderWidth = "3px";
+    document.getElementsByClassName("calc_input")[i].style.borderColor = "red";
+}
+
+reset_sides.onclick = function(){
+  for (i = 0; i < 4; i++){
+    document.getElementsByClassName("calc_input")[i].value = "";
+  }
+  console.log(document.getElementsByClassName("calc_input")[0].value)
+}
+</script>
